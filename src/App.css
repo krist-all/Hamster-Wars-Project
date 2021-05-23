@@ -1,0 +1,48 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+header {
+  background-color: #F6BB0A;
+  color:#0D2149;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  text-transform: uppercase;
+  flex: 0 0 auto;
+  
+}
+
+nav a {
+  padding:0.2em 1em;
+  color:#0D2149;
+  transition: background-color 0.3s linear;
+  text-decoration: none;
+}
+
+nav a:hover{
+  background-color: #F9D342;
+  color:#0D2149;
+  border-radius: 0.2em;
+  font-weight: bold;
+}
+
+nav a.active{
+  background-color: #F9D342;
+  transition: 0.1s;
+  border-radius: 0.2em;
+ 
+ 
+}
+
+main {
+  background-color: #FDE88D;
+  color: #191919;
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+}
