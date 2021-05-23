@@ -11,6 +11,7 @@ const losers = require('./routes/losers.js');
 const PORT = process.env.PORT || 1337;
 const staticFolder = path.join(__dirname, '../build');
 
+
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`, req.params);
     next();
@@ -21,6 +22,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(staticFolder));
+
 
 
 
@@ -35,7 +37,7 @@ app.use('/winners', winners);
 app.use('/losers', losers);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..build/index.html'))
+    res.sendFile(path.join(__dirname, '../build/index.html'))
 })
 
 app.listen(PORT, () => {
