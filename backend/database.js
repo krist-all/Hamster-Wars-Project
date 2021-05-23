@@ -5,7 +5,7 @@ let serviceAccount;
 if(process.env.PRIVATE_KEY){ 
    serviceAccount = JSON.parse(process.env.PRIVATE_KEY)
 } else {
-   serviceAccount = require("./serviceAccountKey.json");
+   serviceAccount = require("../src/serviceAccountKey.json");
 }
 
 admin.initializeApp({
