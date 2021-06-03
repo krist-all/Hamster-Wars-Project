@@ -12,7 +12,7 @@ router.get('/:id', async (req, res) => {
                 res.sendStatus(404);
                 return;
             }
-        matchWinners = [];
+        let matchWinners = [];
         snapshot.forEach(doc =>{
             const data = doc.data();
             matchWinners.push(data);

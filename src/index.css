@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: "Mali Regular";
+  src: url('./fonts/Mali/Mali-Regular.ttf')
+  format('truetype')
+}
+@font-face {
+  font-family: "Mali Bold";
+  src: url('./fonts/Mali/Mali-Bold.ttf')
+  format('truetype')
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -11,7 +11,7 @@ router.get('/', async (req, res) =>{
             res.sendStatus(404);
             return;
             }
-        winners = [];
+        let winners = [];
         snapshot.forEach(doc => {
             const data = doc.data();
             data.id = doc.id;

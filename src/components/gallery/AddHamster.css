@@ -1,0 +1,63 @@
+.add-hamster-form{
+    display: flex;
+    min-width: 40em;
+    min-height: 40em;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    transition: ease 2s;
+}
+input{
+    display: flex;
+    min-height: 2em;
+    min-width: 22em;
+    border-radius: 0.3em;
+    padding-left: 1em;
+    border-color: #05F4B7;
+    margin-top: 0.5em;
+    background-color: #05F4B7;
+    font-family: 'Mali Bold';
+    font-size: 16px +2vmin;
+    border: none;
+}
+.add-hamster-form label{
+    font-family: 'Mali Bold';
+    font-size: 16px + 2vmin;
+    color: #05F4B7;
+}
+.add-hamster-form .errorMessage{
+    position: absolute;
+    color: #fb1a1a;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+    font-family: 'Mali Regular';
+}
+.add-hamster-form .error{
+    box-shadow: 0.1em 0.1em 0.2em 0.2em #fb1a1a;
+}
+.add-hamster-form .valid{
+   box-shadow: 0.1em 0.1em 0.2em 0.2em  #21682a;
+}
+.add-hamster-form .submit-button{
+    display: flex;
+    min-height: 3.5em;
+    min-width: 22em;
+    border-radius: 0.3em;
+    border: none;
+    background-color:#371BB1;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Mali Bold';
+    font-size: 24px + 2vmin;
+    margin-top: 3em;
+    transition: all 0.7s;
+    color:#05F4B7;
+}
+.add-hamster-form .submit-button:hover{
+    cursor: pointer;
+    font-size: medium;
+    transition: all 0.7s;
+}
+.add-hamster-form .submit-button:disabled{
+    display: none;
+}

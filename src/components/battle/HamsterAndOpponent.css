@@ -1,0 +1,41 @@
+.hamster-name{
+    display: flex;
+    min-width: 3em;
+    min-height: 2em;
+}
+.fav-food{
+    display: flex;
+    margin-top: 1em;
+}
+.hamster-age{
+    display: flex;
+    margin-top: 0.5em;
+}
+.hamster-loves{
+    display: flex;
+    margin-top: 0.5em;
+}
+.hamster-image{
+    display: flex;
+    max-height: 25em;
+    max-width: 30em;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em; 
+}
+.hamster-image img{
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+}
+.hamster-container{
+    background-color: #12151F; 
+    padding: 2em;
+    border-radius: 0.2em;
+    color:  #05F4B7;
+    text-transform: uppercase;
+}
+
+
+

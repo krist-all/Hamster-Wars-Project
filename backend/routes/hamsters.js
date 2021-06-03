@@ -69,7 +69,7 @@ router.post('/', async (req, res) =>{
             return;
         }
         const docRef = await db.collection('hamsters').add(object);
-        hamsterId = {
+        let hamsterId = {
                 id: docRef.id
         }
         res.status(200).send(hamsterId);

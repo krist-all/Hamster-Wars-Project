@@ -2,47 +2,41 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  
 }
 header {
-  background-color: #F6BB0A;
-  color:#0D2149;
+  background-color: #05F4B7;
   padding: 0.5em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   text-transform: uppercase;
   flex: 0 0 auto;
-  
+  min-height: 2.5em;
 }
-
 nav a {
   padding:0.2em 1em;
-  color:#0D2149;
-  transition: background-color 0.3s linear;
+  color:#12151F;
+  transition: 0.5s linear;
   text-decoration: none;
+  font-family: 'Mali Bold';
 }
-
 nav a:hover{
-  background-color: #F9D342;
-  color:#0D2149;
-  border-radius: 0.2em;
-  font-weight: bold;
+  background-color:#371BB1 ;
+  color:#05F4B7;
+  cursor: pointer;
 }
-
 nav a.active{
-  background-color: #F9D342;
-  transition: 0.1s;
-  border-radius: 0.2em;
- 
- 
+  transition: 0.5s;
+  background-color: #371BB1;
+  color:#05F4B7;
 }
-
 main {
-  background-color: #FDE88D;
-  color: #191919;
+  background-color: #FBFAF5;
+  color: #12151F;
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
+  align-items: center;
 }

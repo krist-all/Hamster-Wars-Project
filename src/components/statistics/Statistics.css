@@ -1,0 +1,79 @@
+.statistics-container{
+    background-color: #FBFAF5;
+    min-height: 100vh;
+    width: 70vw;
+    margin-top:4em;
+    display: grid;
+    border-radius: 0.2em;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+.winners{
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-family: 'Mali Regular';
+}
+.losers{
+    display: flex;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-family: 'Mali Regular';
+}
+.container{
+    display: flex;
+    min-height: 10em;
+    min-width: 25em;
+    background-color: #12151F;
+    color: #05F4B7;
+    content: contain;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+    justify-content: space-evenly;
+    border-radius: 0.2em;
+}
+.container:nth-child(odd){
+    background-color: #05F4B7;
+    color: #12151F;
+}
+.stat-image{
+    display: flex;
+    max-width: 20em;
+    max-height: 10em;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2em;
+    flex-direction: column;
+}
+.stat-image img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    -webkit-flex-shrink:0;
+    filter: contrast(1);
+    border-radius: 0.2em;
+}
+.hamster-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    font-family: 'Mali Bold';
+}
+.container .hamster-name{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}

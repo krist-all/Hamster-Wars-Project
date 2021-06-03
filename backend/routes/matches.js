@@ -46,7 +46,7 @@ router.post('/', async (req, res) =>{
             return;
         }
         const docRef = await db.collection('matches').add(object);
-        matchId = {
+        let matchId = {
             id: docRef.id
         }
         res.status(200).send(matchId);   

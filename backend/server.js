@@ -10,7 +10,7 @@ const losers = require('./routes/losers.js');
 
 const PORT = process.env.PORT || 1337;
 const staticFolder = path.join(__dirname, '../build');
-
+const images = path.join(__dirname, './img')
 
 app.use((req, res, next) => {
     console.log(`${req.method} ${req.url}`, req.params);
@@ -22,9 +22,7 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 
 app.use(express.static(staticFolder));
-
-
-
+app.use( '/img', express.static(images));
 
 app.use('/hamsters', hamsters);
 
