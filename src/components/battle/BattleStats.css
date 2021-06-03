@@ -60,8 +60,8 @@
 }
 .stats-container .stats-image{
     display: flex;
-    max-height: 25em;
-    max-width: 30em;
+    max-height: 15em;
+    max-width: 25em;
     overflow: hidden;
     align-items: center;
     justify-content: center;
