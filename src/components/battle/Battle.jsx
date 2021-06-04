@@ -11,7 +11,6 @@ const Battle = () => {
     const [battleHamster, setBattleHamster] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get randomhamster1')
             const response = await fetch('/hamsters/random', { method: 'GET'});
             const data = await response.json();
             setBattleHamster(data);
@@ -22,7 +21,6 @@ const Battle = () => {
     const [opponentHamster, setOpponentHamster] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get randomhamster2')
             const response = await fetch('/hamsters/random', { method: 'GET'});
             const data = await response.json();
             setOpponentHamster(data);
@@ -74,8 +72,20 @@ const Battle = () => {
         setShowStats(true);
     }
 
-     function nextBattle(){
-        window.location.reload(false);
+     const nextBattle = () => {
+        async function getNewBattleHamster(){
+            const response = await fetch('/hamsters/random', { method: 'GET'});
+            const data = await response.json();
+            setBattleHamster(data);
+        }
+        async function getNewOpponentHamster(){
+            const response = await fetch('/hamsters/random', { method: 'GET'});
+            const data = await response.json();
+            setOpponentHamster(data);
+        }
+        setShowStats(false);
+        getNewBattleHamster();
+        getNewOpponentHamster();
     }
     
     return(

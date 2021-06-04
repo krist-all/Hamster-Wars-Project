@@ -6,7 +6,6 @@ const BattleStats = ({battleHamster, opponentHamster, nextBattle}) => {
     const [battleHamsterById, setBattleHamsterById] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get randomhamster1 stats')
             const response = await fetch(`/hamsters/${battleHamster.id}`, { method: 'GET'});
             const data = await response.json();
             setBattleHamsterById(data);
@@ -17,7 +16,6 @@ const BattleStats = ({battleHamster, opponentHamster, nextBattle}) => {
     const [opponentHamsterById, setOpponentHamsterById] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get randomhamster2 stats')
             const response = await fetch(`/hamsters/${opponentHamster.id}`, { method: 'GET'});
             const data = await response.json();
             setOpponentHamsterById(data);

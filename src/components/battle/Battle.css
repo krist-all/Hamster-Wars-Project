@@ -6,7 +6,7 @@
     display: grid;
     border-radius: 0.2em;
     grid-template-columns: 1fr 10% 1fr;
-    grid-template-rows: 10% 1fr 35%;
+    grid-template-rows: 10% 1fr 39%;
     place-items: center;
     padding: 2em;
 }
@@ -64,6 +64,7 @@
     grid-row: 3/4;
     text-transform: uppercase;
     color:#05F4B7;
+    margin-top: -15em;
 }
 .winner-button1:hover{
     cursor: pointer;
@@ -88,6 +89,7 @@
     grid-row: 3/4;
     text-transform: uppercase;
     color:#05F4B7;
+    margin-top: -15em;
 }
 .winner-button2:hover{
     cursor: pointer;

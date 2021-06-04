@@ -3,12 +3,11 @@ import './History.css'
 import DeleteIcon from '../icons/DeleteIcon'
 import axios from 'axios'
 
-const HistoryItem = ({match}) =>{
+const HistoryItem = ({match, deleteMatch}) =>{
 
     const [matchWinner, setMatchWinner] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get hamster1 stats')
             const response = await fetch(`/hamsters/${match.winnerId}`, { method: 'GET'});
             const data = await response.json();
             setMatchWinner(data);
@@ -19,7 +18,6 @@ const HistoryItem = ({match}) =>{
     const [matchLoser, setMatchLoser] = useState([]);
     useEffect(() => {
         async function get(){
-            console.log('get hamster2 stats')
             const response = await fetch(`/hamsters/${match.loserId}`, { method: 'GET'});
             const data = await response.json();
             setMatchLoser(data);
@@ -27,15 +25,16 @@ const HistoryItem = ({match}) =>{
         get();
     }, [match.loserId])
 
-    async function deleteMatch(id){
+    async function deleteM(id){
         await axios.delete(`/matches/${id}`)
         .then(response => console.log(response));
     }
     
     async function deleteEvent(){
+        deleteM(match.id);
         deleteMatch(match.id);
-        window.location.reload(false);
     }
+
     return(
         <div className="history-container">
             <div className="winner-container">

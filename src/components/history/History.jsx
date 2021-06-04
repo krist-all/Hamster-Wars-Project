@@ -6,7 +6,6 @@ const History = () => {
     const [matches, setMatches] = useState([]);
     useEffect(() =>{
         async function get(){
-            console.log('get matches')
             const response = await fetch('/matches', { method: 'GET'});
             const data = await response.json();
             setMatches(data);
@@ -14,11 +13,16 @@ const History = () => {
         get();
     }, [])
 
+    const deleteMatch = (id) =>{
+        let newMatches = matches.filter(match => match.id !== id);
+        setMatches(newMatches);
+    }
+
     return(
         <div className="history-list">
             <h1>RECENT MATCHES</h1>
             {matches.map((match)=>
-                <HistoryItem key={match.id} match={match}/> 
+                <HistoryItem key={match.id} match={match} deleteMatch={deleteMatch}/> 
             )}
         </div>
     )}

@@ -1,7 +1,7 @@
 import './AddHamster.css'
 import {useState } from 'react'
 
-const AddHamster = ({setViewForm}) =>{
+const AddHamster = ({setViewForm, refreshForm}) =>{
     const [nameText, setNameText] = useState('');
     const [ageValue, setAgeValue] = useState('');
     const [favFoodText, setFavFoodText] = useState('');
@@ -21,7 +21,6 @@ const AddHamster = ({setViewForm}) =>{
             games: 0,
         }
         async function post(){
-            console.log(newBody);
             const response = await fetch('hamsters', {method: 'POST', headers:{
                 "Content-Type": "application/json"
             }, 
@@ -42,6 +41,7 @@ const AddHamster = ({setViewForm}) =>{
         setLovesTouched(false);
         setImageTouched(false);
         setViewForm(false);
+        refreshForm();
     }
 
     const inputUpperCase = (str) => str.charAt(0).toUpperCase() + str.slice(1);

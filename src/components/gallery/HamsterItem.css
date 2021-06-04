@@ -83,4 +83,14 @@
     background-color: #12151F;
     padding: 1.5em;
     color: #05F4B7;
+    font-family: 'Mali Regular';
+}
+
+.defeated{
+    text-transform:uppercase;
+}
+
+.defeated p{
+    text-decoration: underline;
+    text-align: center;
 }
